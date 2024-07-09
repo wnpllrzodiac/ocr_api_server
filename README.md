@@ -73,6 +73,9 @@ docker run -p 9898:9898 -d ocr_server:v1
 # OCR请求
 # resp = requests.post("http://{host}:{port}/ocr/file", files={'image': image_bytes})
 # resp = requests.post("http://{host}:{port}/ocr/b64/text", data=base64.b64encode(file).decode())
+```
+curl -X POST -F "image=@d:\111.jpg" http://APIHOS:PORT/ocr/file
+```
 
 # 目标检测请求
 # resp = requests.post("http://{host}:{port}/det/file", files={'image': image_bytes})
