@@ -91,6 +91,9 @@
 ## 🔌 API 端点
 
 ### 1. OCR 识别
+```
+curl -X POST -F "image=@d:\111.jpg" http://APIHOS:PORT/ocr/file
+```
 
 🔗 **端点**：`POST /ocr`
 
