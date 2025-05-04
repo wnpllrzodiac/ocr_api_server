@@ -1,5 +1,5 @@
 # 使用官方 Python 运行时作为父镜像
-FROM python:3.9-slim
+FROM docker.1ms.run/library/python:3.9-slim
 
 # 设置工作目录
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # 安装项目依赖
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -i https://mirrors.aliyun.com/pypi/simple/ --no-cache-dir -r requirements.txt
 
 # 暴露端口 8000
 EXPOSE 8000
